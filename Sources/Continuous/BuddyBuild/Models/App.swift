@@ -1,18 +1,15 @@
-enum Platform: String, Codable {
+public enum Platform: String, Codable {
     case ios
     case android
 }
 
-struct App: Codable {
-    let id: String
-    let appName: String
-    let platform: Platform
-
-    enum CodingKeys: String, CodingKey {
-        case id = "_id", appName = "app_name", platform
-    }
+public struct App: Codable {
+    // sourcery: keyOverride = "_id"
+    public let id: String
+    public let appName: String
+    public let platform: Platform
 }
 
-struct Branch: Codable {
-    let name: String
+public struct Branch: Codable {
+    public let name: String
 }

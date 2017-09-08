@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79673DAB1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DAA1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift */; };
+		79673DAD1F623A26006C63EC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DAC1F623A26006C63EC /* Result.swift */; };
+		79673DAF1F623B01006C63EC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DAE1F623B01006C63EC /* Request.swift */; };
+		79673DB21F623D9E006C63EC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DB11F623D9E006C63EC /* NetworkService.swift */; };
 		79E314E41F539E3A00241D88 /* Continuous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E314DA1F539E3A00241D88 /* Continuous.framework */; };
 		79E315091F539E8D00241D88 /* BuddyBuildAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FD1F539E8D00241D88 /* BuddyBuildAPI.swift */; };
 		79E3150A1F539E8D00241D88 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FF1F539E8D00241D88 /* App.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79673DAA1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnakeCaseCodingKeys.generated.swift; sourceTree = "<group>"; };
+		79673DAC1F623A26006C63EC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		79673DAE1F623B01006C63EC /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		79673DB11F623D9E006C63EC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		79E314DA1F539E3A00241D88 /* Continuous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Continuous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E314E31F539E3A00241D88 /* ContinuousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContinuousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E314F41F539E8C00241D88 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -39,6 +47,7 @@
 		79E315011F539E8D00241D88 /* Continuous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Continuous.h; sourceTree = "<group>"; };
 		79E315031F539E8D00241D88 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79E315041F539E8D00241D88 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		79E3151E1F622FC800241D88 /* SnakeCaseCodingKeys.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = SnakeCaseCodingKeys.stencil; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79673DB01F623CFE006C63EC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				79673DB11F623D9E006C63EC /* NetworkService.swift */,
+				79673DAE1F623B01006C63EC /* Request.swift */,
+				79673DAC1F623A26006C63EC /* Result.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		79E314D01F539E3A00241D88 = {
 			isa = PBXGroup;
 			children = (
@@ -109,9 +128,10 @@
 		79E314FB1F539E8D00241D88 /* Continuous */ = {
 			isa = PBXGroup;
 			children = (
+				79673DB01F623CFE006C63EC /* Network */,
 				79E314FC1F539E8D00241D88 /* BuddyBuild */,
-				79E315011F539E8D00241D88 /* Continuous.h */,
 				79E315031F539E8D00241D88 /* Info.plist */,
+				79E315011F539E8D00241D88 /* Continuous.h */,
 			);
 			path = Continuous;
 			sourceTree = "<group>";
@@ -128,10 +148,20 @@
 		79E314FE1F539E8D00241D88 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				79E315211F62376400241D88 /* Generated */,
+				79E3151E1F622FC800241D88 /* SnakeCaseCodingKeys.stencil */,
 				79E314FF1F539E8D00241D88 /* App.swift */,
 				79E315001F539E8D00241D88 /* Build.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		79E315211F62376400241D88 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				79673DAA1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +182,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79E314EE1F539E3A00241D88 /* Build configuration list for PBXNativeTarget "Continuous" */;
 			buildPhases = (
+				79E315221F6237AB00241D88 /* Sourcery */,
 				79E314D51F539E3A00241D88 /* Sources */,
 				79E314D61F539E3A00241D88 /* Frameworks */,
 				79E314D71F539E3A00241D88 /* Headers */,
@@ -241,14 +272,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		79E315221F6237AB00241D88 /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Sourcery;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sourcery --sources Sources/COntinuous/BuddyBuild/Models --templates Sources/Continuous/BuddyBuild/Models --output Sources/COntinuous/BuddyBuild/Models/Generated";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79E314D51F539E3A00241D88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				79E315091F539E8D00241D88 /* BuddyBuildAPI.swift in Sources */,
+				79673DAF1F623B01006C63EC /* Request.swift in Sources */,
+				79673DAD1F623A26006C63EC /* Result.swift in Sources */,
+				79673DAB1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift in Sources */,
 				79E3150B1F539E8D00241D88 /* Build.swift in Sources */,
 				79E3150A1F539E8D00241D88 /* App.swift in Sources */,
+				79673DB21F623D9E006C63EC /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

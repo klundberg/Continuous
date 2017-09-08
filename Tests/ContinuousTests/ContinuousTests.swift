@@ -6,14 +6,14 @@ class ContinuousTests: XCTestCase {
     func testGetData() {
         let exp = expectation(description: "blah")
 
-        let api = BuddyBuildAPI()
-        api.request(appsRequest()) { (result) in
+        let api = NetworkService()
+        api.request(BuddyBuildAPI.apps()) { (result) in
             guard case let .value(value) = result else {
                 return
             }
 
             dump(value)
-            api.request(branchesRequest(appId: value[0].id)) { (result) in
+            api.request(BuddyBuildAPI.branches(appId: value[0].id)) { (result) in
                 guard case let .value(branches) = result else {
                     return
                 }

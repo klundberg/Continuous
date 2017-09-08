@@ -1,0 +1,14 @@
+{% for type in types.based.Codable|!enum %}
+public extension {{ type.name }} {
+    enum CodingKeys: String, CodingKey {
+    {% for variable in type.variables|instance %}
+        {% if variable|annotated:"keyOverride" %}
+        case {{ variable.name }} = "{{ variable.annotations.keyOverride }}"
+        {% else %}
+        case {{ variable.name }} = "{{ variable.name|camelToSnakeCase }}"
+        {% endif %}
+    {% endfor %}
+    }
+}
+
+{% endfor %}

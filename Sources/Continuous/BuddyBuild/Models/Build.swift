@@ -1,48 +1,49 @@
 import Foundation
 
-enum BuildStatus: String, Codable {
-    case failed
-    case succeeded
-    case cancelled
+public enum BuildStatus: String, Codable {
     case pending
+    case cancelled
     case building
+    case succeeded
+    case failed
 }
 
-struct BuildName: Codable {
-    let name: String
+public struct BuildName: Codable {
+    public let name: String
 }
 
-struct Build: Codable {
-    let _id: String
-    let app_id: String
-    let repo_url: URL
-    let build_status: BuildStatus
-    let finished: Bool
-    let commit_info: CommitInfo
-    let buildNumber: Int
-    let created_at: Date
-    let started_at: Date
-    let finished_at: Date
-    let test_summary: TestSummary
-    let links: [String: Link]
+public struct Build: Codable {
+    // sourcery: keyOverride = "_id"
+    public let id: String
+    public let appId: String
+    public let repoUrl: URL
+    public let buildStatus: BuildStatus
+    public let finished: Bool
+    public let commitInfo: CommitInfo
+    public let buildNumber: Int
+    public let createdAt: Date
+    public let startedAt: Date
+    public let finishedAt: Date
+    public let testSummary: TestSummary
+    public let links: [String: Link]
 }
 
-struct CommitInfo: Codable {
-    let tags: [String]
-    let branch: String
-    let commit_sha: String
-    let author: String
-    let message: String
-    let html_url: URL
+public struct CommitInfo: Codable {
+    public let tags: [String]
+    public let branch: String
+    public let commitSha: String
+    public let author: String
+    public let message: String
+    public let htmlUrl: URL
 }
 
-struct TestSummary: Codable {
-    let tests_count: Int
-    let tests_passed: Int
-    let code_coverage_percentage: Double
+public struct TestSummary: Codable {
+    public let testsCount: Int
+    public let testsPassed: Int
+    public let codeCoveragePercentage: Double
 }
 
-struct Link: Codable {
-    let name: String
-    let url: URL
+public struct Link: Codable {
+    public let name: String
+    public let url: URL
 }
