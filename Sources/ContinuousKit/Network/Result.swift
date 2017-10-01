@@ -6,7 +6,7 @@ enum Result<Value> {
 }
 
 extension Result {
-    init(_ evaluate: () throws -> Value) {
+    init(evaluate: () throws -> Value) {
         do {
             self = .value(try evaluate())
         } catch {
