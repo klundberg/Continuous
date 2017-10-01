@@ -13,7 +13,7 @@ import ContinuousKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let networkService = NetworkService()
+    let networkService: NetworkService = StandardNetworkService()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 

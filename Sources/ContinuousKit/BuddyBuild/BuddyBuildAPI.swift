@@ -1,6 +1,6 @@
 import Foundation
 
-class BuddyBuildAPI {
+public enum BuddyBuildAPI {
     private static func headers() -> [String: String] {
         return ["Authorization": "Bearer \(token)"]
     }
@@ -10,11 +10,11 @@ class BuddyBuildAPI {
         return URL(string: "\(baseURL)\(path)")!
     }
 
-    static func apps() -> Request<[App]> {
+    public static func apps() -> Request<[App]> {
         return .init(url: url("/apps"), headers: headers())
     }
 
-    static func branches(appId: String) -> Request<[Branch]> {
+    public static func branches(appId: String) -> Request<[Branch]> {
         return .init(url: url("/apps/\(appId)/branches"), headers: headers())
     }
 }

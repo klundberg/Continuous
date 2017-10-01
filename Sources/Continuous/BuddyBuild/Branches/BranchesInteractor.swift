@@ -15,4 +15,13 @@ class BranchesInteractor {
     init(networkService: NetworkService) {
         self.networkService = networkService
     }
+
+    func requestData() {
+        networkService.request(BuddyBuildAPI.apps()) { (result) in
+            guard case let .value(apps) = result else { return }
+            self.networkService.request(BuddyBuildAPI.branches(appId: apps[0].id), completion: { (result) in
+                
+            })
+        }
+    }
 }

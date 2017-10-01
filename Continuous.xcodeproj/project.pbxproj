@@ -16,7 +16,6 @@
 		79BCD5131F8083060005B102 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5121F8083060005B102 /* Token.swift */; };
 		79BCD5151F8083790005B102 /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5141F8083790005B102 /* URLRequest+Extension.swift */; };
 		79BCD5641F808C4A0005B102 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD5631F808C4A0005B102 /* LICENSE */; };
-		79BCD5811F808C8E0005B102 /* ContinuousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5801F808C8E0005B102 /* ContinuousTests.swift */; };
 		79BCD5941F808CC40005B102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD58A1F808CAB0005B102 /* AppDelegate.swift */; };
 		79BCD5961F808CDA0005B102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD58B1F808CAB0005B102 /* Assets.xcassets */; };
 		79BCD5971F808CDC0005B102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD58C1F808CAB0005B102 /* LaunchScreen.storyboard */; };
@@ -26,6 +25,7 @@
 		79BCD5AE1F80992C0005B102 /* BranchesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5A51F8099000005B102 /* BranchesPresenter.swift */; };
 		79BCD5AF1F80992C0005B102 /* BranchesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5A71F80990C0005B102 /* BranchesInteractor.swift */; };
 		79BCD5B01F80992C0005B102 /* BranchesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5A91F8099150005B102 /* BranchesRouter.swift */; };
+		79BCD5B71F80AB1A0005B102 /* BranchesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5B51F80A9C70005B102 /* BranchesInteractorTests.swift */; };
 		79E314E41F539E3A00241D88 /* ContinuousKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E314DA1F539E3A00241D88 /* ContinuousKit.framework */; };
 		79E315091F539E8D00241D88 /* BuddyBuildAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FD1F539E8D00241D88 /* BuddyBuildAPI.swift */; };
 		79E3150A1F539E8D00241D88 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FF1F539E8D00241D88 /* App.swift */; };
@@ -86,7 +86,6 @@
 		79BCD5631F808C4A0005B102 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		79BCD5691F808C8E0005B102 /* Continuous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Continuous.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BCD57C1F808C8E0005B102 /* ContinuousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContinuousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		79BCD5801F808C8E0005B102 /* ContinuousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuousTests.swift; sourceTree = "<group>"; };
 		79BCD5821F808C8E0005B102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79BCD58A1F808CAB0005B102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79BCD58B1F808CAB0005B102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		79BCD5A51F8099000005B102 /* BranchesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BranchesPresenter.swift; path = Sources/Continuous/BuddyBuild/Branches/BranchesPresenter.swift; sourceTree = SOURCE_ROOT; };
 		79BCD5A71F80990C0005B102 /* BranchesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BranchesInteractor.swift; path = Sources/Continuous/BuddyBuild/Branches/BranchesInteractor.swift; sourceTree = SOURCE_ROOT; };
 		79BCD5A91F8099150005B102 /* BranchesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BranchesRouter.swift; path = Sources/Continuous/BuddyBuild/Branches/BranchesRouter.swift; sourceTree = SOURCE_ROOT; };
+		79BCD5B51F80A9C70005B102 /* BranchesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchesInteractorTests.swift; sourceTree = "<group>"; };
 		79E314DA1F539E3A00241D88 /* ContinuousKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ContinuousKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E314E31F539E3A00241D88 /* ContinuousKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContinuousKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E314F41F539E8C00241D88 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		79BCD57F1F808C8E0005B102 /* ContinuousTests */ = {
 			isa = PBXGroup;
 			children = (
-				79BCD5801F808C8E0005B102 /* ContinuousTests.swift */,
+				79BCD5B31F80A9A50005B102 /* BuddyBuild */,
 				79BCD5821F808C8E0005B102 /* Info.plist */,
 			);
 			path = ContinuousTests;
@@ -198,6 +198,22 @@
 			name = Branches;
 			path = Sources/Continuous/BuddyBuild/Branches;
 			sourceTree = SOURCE_ROOT;
+		};
+		79BCD5B31F80A9A50005B102 /* BuddyBuild */ = {
+			isa = PBXGroup;
+			children = (
+				79BCD5B41F80A9B20005B102 /* Branches */,
+			);
+			path = BuddyBuild;
+			sourceTree = "<group>";
+		};
+		79BCD5B41F80A9B20005B102 /* Branches */ = {
+			isa = PBXGroup;
+			children = (
+				79BCD5B51F80A9C70005B102 /* BranchesInteractorTests.swift */,
+			);
+			path = Branches;
+			sourceTree = "<group>";
 		};
 		79E314D01F539E3A00241D88 = {
 			isa = PBXGroup;
@@ -501,7 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79BCD5811F808C8E0005B102 /* ContinuousTests.swift in Sources */,
+				79BCD5B71F80AB1A0005B102 /* BranchesInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

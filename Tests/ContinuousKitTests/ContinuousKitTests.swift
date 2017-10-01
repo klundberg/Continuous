@@ -6,7 +6,7 @@ class ContinuousKitTests: XCTestCase {
     func testGetData() {
         let exp = expectation(description: "blah")
 
-        let api = NetworkService()
+        let api = StandardNetworkService()
         api.request(BuddyBuildAPI.apps()) { (result) in
             guard case let .value(value) = result else {
                 return

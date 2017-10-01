@@ -1,6 +1,10 @@
 import Foundation
 
-public class NetworkService {
+public protocol NetworkService {
+    func request<Response>(_ request: Request<Response>, completion: @escaping (Result<Response>) -> ())
+}
+
+public class StandardNetworkService: NetworkService {
     public var session: URLSession = .shared
 
     public init() {}
