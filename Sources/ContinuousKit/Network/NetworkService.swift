@@ -1,15 +1,13 @@
 import Foundation
 
-class NetworkService {
-    var session: URLSession = .shared
+public class NetworkService {
+    public var session: URLSession = .shared
 
-    func request<Response>(_ request: Request<Response>, completion: @escaping (Result<Response>) -> ()) {
+    public init() {}
+
+    public func request<Response>(_ request: Request<Response>, completion: @escaping (Result<Response>) -> ()) {
         session.dataTask(with: request.toURLRequest(), completionHandler: { (data, response, error) in
-            if let data = data {
-                completion(request.parse(data))
-            } else {
-                completion(.error(error!))
-            }
+            completion(data.map(request.parse) ?? .error(error!))
         }).resume()
     }
 }

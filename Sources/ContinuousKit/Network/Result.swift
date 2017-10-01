@@ -1,12 +1,12 @@
 import Foundation
 
-enum Result<Value> {
+public enum Result<Value> {
     case value(Value)
     case error(Error)
 }
 
 extension Result {
-    init(evaluate: () throws -> Value) {
+    public init(evaluate: () throws -> Value) {
         do {
             self = .value(try evaluate())
         } catch {

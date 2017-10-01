@@ -1,20 +1,20 @@
 import Foundation
 
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     case GET, POST, PUT, DELETE
 }
 
-typealias HTTPHeaders = [String: String]
+public typealias HTTPHeaders = [String: String]
 
-struct Request<Response> {
-    typealias Parser = (Data) -> Result<Response>
+public struct Request<Response> {
+    public typealias Parser = (Data) -> Result<Response>
 
-    let url: URL
-    let method: HTTPMethod
-    let headers: HTTPHeaders
-    let parse: Parser
+    public let url: URL
+    public let method: HTTPMethod
+    public let headers: HTTPHeaders
+    public let parse: Parser
 
-    init(url: URL, method: HTTPMethod = .GET, headers: HTTPHeaders = [:], parse: @escaping Parser) {
+    public init(url: URL, method: HTTPMethod = .GET, headers: HTTPHeaders = [:], parse: @escaping Parser) {
         self.url = url
         self.method = method
         self.headers = headers
@@ -30,7 +30,7 @@ struct Request<Response> {
 }
 
 extension Request where Response: Decodable {
-    init(url: URL, method: HTTPMethod = .GET, headers: [String: String] = [:]) {
+    public init(url: URL, method: HTTPMethod = .GET, headers: [String: String] = [:]) {
         self.init(url: url, method: method, headers: headers) { (data) -> Result<Response> in
             return Result(evaluate: { try JSONDecoder().decode(Response.self, from: data) })
         }

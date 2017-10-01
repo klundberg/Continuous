@@ -18,11 +18,14 @@
 		79BCD5641F808C4A0005B102 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD5631F808C4A0005B102 /* LICENSE */; };
 		79BCD5811F808C8E0005B102 /* ContinuousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5801F808C8E0005B102 /* ContinuousTests.swift */; };
 		79BCD5941F808CC40005B102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD58A1F808CAB0005B102 /* AppDelegate.swift */; };
-		79BCD5951F808CC40005B102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5931F808CAB0005B102 /* ViewController.swift */; };
 		79BCD5961F808CDA0005B102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD58B1F808CAB0005B102 /* Assets.xcassets */; };
 		79BCD5971F808CDC0005B102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD58C1F808CAB0005B102 /* LaunchScreen.storyboard */; };
 		79BCD5981F808D1B0005B102 /* ContinuousKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E314DA1F539E3A00241D88 /* ContinuousKit.framework */; };
 		79BCD5991F808D1B0005B102 /* ContinuousKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79E314DA1F539E3A00241D88 /* ContinuousKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79BCD5AD1F80992C0005B102 /* BranchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5A31F8098F10005B102 /* BranchesViewController.swift */; };
+		79BCD5AE1F80992C0005B102 /* BranchesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5A51F8099000005B102 /* BranchesPresenter.swift */; };
+		79BCD5AF1F80992C0005B102 /* BranchesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5A71F80990C0005B102 /* BranchesInteractor.swift */; };
+		79BCD5B01F80992C0005B102 /* BranchesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5A91F8099150005B102 /* BranchesRouter.swift */; };
 		79E314E41F539E3A00241D88 /* ContinuousKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E314DA1F539E3A00241D88 /* ContinuousKit.framework */; };
 		79E315091F539E8D00241D88 /* BuddyBuildAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FD1F539E8D00241D88 /* BuddyBuildAPI.swift */; };
 		79E3150A1F539E8D00241D88 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FF1F539E8D00241D88 /* App.swift */; };
@@ -89,7 +92,10 @@
 		79BCD58B1F808CAB0005B102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79BCD58D1F808CAB0005B102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79BCD5921F808CAB0005B102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79BCD5931F808CAB0005B102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79BCD5A31F8098F10005B102 /* BranchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BranchesViewController.swift; path = Sources/Continuous/BuddyBuild/Branches/BranchesViewController.swift; sourceTree = SOURCE_ROOT; };
+		79BCD5A51F8099000005B102 /* BranchesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BranchesPresenter.swift; path = Sources/Continuous/BuddyBuild/Branches/BranchesPresenter.swift; sourceTree = SOURCE_ROOT; };
+		79BCD5A71F80990C0005B102 /* BranchesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BranchesInteractor.swift; path = Sources/Continuous/BuddyBuild/Branches/BranchesInteractor.swift; sourceTree = SOURCE_ROOT; };
+		79BCD5A91F8099150005B102 /* BranchesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BranchesRouter.swift; path = Sources/Continuous/BuddyBuild/Branches/BranchesRouter.swift; sourceTree = SOURCE_ROOT; };
 		79E314DA1F539E3A00241D88 /* ContinuousKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ContinuousKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E314E31F539E3A00241D88 /* ContinuousKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContinuousKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E314F41F539E8C00241D88 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -162,14 +168,35 @@
 		79BCD5891F808CAB0005B102 /* Continuous */ = {
 			isa = PBXGroup;
 			children = (
+				79BCD5A21F8098740005B102 /* BuddyBuild */,
 				79BCD58A1F808CAB0005B102 /* AppDelegate.swift */,
 				79BCD58B1F808CAB0005B102 /* Assets.xcassets */,
 				79BCD58C1F808CAB0005B102 /* LaunchScreen.storyboard */,
 				79BCD5921F808CAB0005B102 /* Info.plist */,
-				79BCD5931F808CAB0005B102 /* ViewController.swift */,
 			);
 			name = Continuous;
 			path = Sources/Continuous;
+			sourceTree = SOURCE_ROOT;
+		};
+		79BCD5A21F8098740005B102 /* BuddyBuild */ = {
+			isa = PBXGroup;
+			children = (
+				79BCD5B21F8099390005B102 /* Branches */,
+			);
+			name = BuddyBuild;
+			path = Sources/Continuous/BuddyBuild;
+			sourceTree = SOURCE_ROOT;
+		};
+		79BCD5B21F8099390005B102 /* Branches */ = {
+			isa = PBXGroup;
+			children = (
+				79BCD5A31F8098F10005B102 /* BranchesViewController.swift */,
+				79BCD5A51F8099000005B102 /* BranchesPresenter.swift */,
+				79BCD5A71F80990C0005B102 /* BranchesInteractor.swift */,
+				79BCD5A91F8099150005B102 /* BranchesRouter.swift */,
+			);
+			name = Branches;
+			path = Sources/Continuous/BuddyBuild/Branches;
 			sourceTree = SOURCE_ROOT;
 		};
 		79E314D01F539E3A00241D88 = {
@@ -462,7 +489,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79BCD5951F808CC40005B102 /* ViewController.swift in Sources */,
+				79BCD5AE1F80992C0005B102 /* BranchesPresenter.swift in Sources */,
+				79BCD5AD1F80992C0005B102 /* BranchesViewController.swift in Sources */,
+				79BCD5AF1F80992C0005B102 /* BranchesInteractor.swift in Sources */,
+				79BCD5B01F80992C0005B102 /* BranchesRouter.swift in Sources */,
 				79BCD5941F808CC40005B102 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
