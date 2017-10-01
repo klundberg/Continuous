@@ -16,12 +16,13 @@
 		79BCD5131F8083060005B102 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5121F8083060005B102 /* Token.swift */; };
 		79BCD5151F8083790005B102 /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5141F8083790005B102 /* URLRequest+Extension.swift */; };
 		79BCD5641F808C4A0005B102 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD5631F808C4A0005B102 /* LICENSE */; };
-		79BCD56C1F808C8E0005B102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD56B1F808C8E0005B102 /* AppDelegate.swift */; };
-		79BCD56E1F808C8E0005B102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD56D1F808C8E0005B102 /* ViewController.swift */; };
-		79BCD5711F808C8E0005B102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD56F1F808C8E0005B102 /* Main.storyboard */; };
-		79BCD5731F808C8E0005B102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD5721F808C8E0005B102 /* Assets.xcassets */; };
-		79BCD5761F808C8E0005B102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD5741F808C8E0005B102 /* LaunchScreen.storyboard */; };
 		79BCD5811F808C8E0005B102 /* ContinuousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5801F808C8E0005B102 /* ContinuousTests.swift */; };
+		79BCD5941F808CC40005B102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD58A1F808CAB0005B102 /* AppDelegate.swift */; };
+		79BCD5951F808CC40005B102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD5931F808CAB0005B102 /* ViewController.swift */; };
+		79BCD5961F808CDA0005B102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD58B1F808CAB0005B102 /* Assets.xcassets */; };
+		79BCD5971F808CDC0005B102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BCD58C1F808CAB0005B102 /* LaunchScreen.storyboard */; };
+		79BCD5981F808D1B0005B102 /* ContinuousKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E314DA1F539E3A00241D88 /* ContinuousKit.framework */; };
+		79BCD5991F808D1B0005B102 /* ContinuousKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79E314DA1F539E3A00241D88 /* ContinuousKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79E314E41F539E3A00241D88 /* ContinuousKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E314DA1F539E3A00241D88 /* ContinuousKit.framework */; };
 		79E315091F539E8D00241D88 /* BuddyBuildAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FD1F539E8D00241D88 /* BuddyBuildAPI.swift */; };
 		79E3150A1F539E8D00241D88 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FF1F539E8D00241D88 /* App.swift */; };
@@ -39,6 +40,13 @@
 			remoteGlobalIDString = 79BCD5681F808C8E0005B102;
 			remoteInfo = Continuous;
 		};
+		79BCD59A1F808D1B0005B102 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79E314D11F539E3A00241D88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79E314D91F539E3A00241D88;
+			remoteInfo = ContinuousKit;
+		};
 		79E314E51F539E3A00241D88 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 79E314D11F539E3A00241D88 /* Project object */;
@@ -47,6 +55,20 @@
 			remoteInfo = Continuous;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		79BCD59C1F808D1C0005B102 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				79BCD5991F808D1B0005B102 /* ContinuousKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		79673DAA1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnakeCaseCodingKeys.generated.swift; sourceTree = "<group>"; };
@@ -60,15 +82,14 @@
 		79BCD5171F80890A0005B102 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 		79BCD5631F808C4A0005B102 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		79BCD5691F808C8E0005B102 /* Continuous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Continuous.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		79BCD56B1F808C8E0005B102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79BCD56D1F808C8E0005B102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		79BCD5701F808C8E0005B102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		79BCD5721F808C8E0005B102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		79BCD5751F808C8E0005B102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		79BCD5771F808C8E0005B102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79BCD57C1F808C8E0005B102 /* ContinuousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContinuousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BCD5801F808C8E0005B102 /* ContinuousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuousTests.swift; sourceTree = "<group>"; };
 		79BCD5821F808C8E0005B102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79BCD58A1F808CAB0005B102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79BCD58B1F808CAB0005B102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79BCD58D1F808CAB0005B102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79BCD5921F808CAB0005B102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79BCD5931F808CAB0005B102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		79E314DA1F539E3A00241D88 /* ContinuousKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ContinuousKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E314E31F539E3A00241D88 /* ContinuousKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContinuousKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E314F41F539E8C00241D88 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -89,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79BCD5981F808D1B0005B102 /* ContinuousKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,19 +150,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		79BCD56A1F808C8E0005B102 /* Continuous */ = {
-			isa = PBXGroup;
-			children = (
-				79BCD56B1F808C8E0005B102 /* AppDelegate.swift */,
-				79BCD56D1F808C8E0005B102 /* ViewController.swift */,
-				79BCD56F1F808C8E0005B102 /* Main.storyboard */,
-				79BCD5721F808C8E0005B102 /* Assets.xcassets */,
-				79BCD5741F808C8E0005B102 /* LaunchScreen.storyboard */,
-				79BCD5771F808C8E0005B102 /* Info.plist */,
-			);
-			path = Continuous;
-			sourceTree = "<group>";
-		};
 		79BCD57F1F808C8E0005B102 /* ContinuousTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +158,19 @@
 			);
 			path = ContinuousTests;
 			sourceTree = "<group>";
+		};
+		79BCD5891F808CAB0005B102 /* Continuous */ = {
+			isa = PBXGroup;
+			children = (
+				79BCD58A1F808CAB0005B102 /* AppDelegate.swift */,
+				79BCD58B1F808CAB0005B102 /* Assets.xcassets */,
+				79BCD58C1F808CAB0005B102 /* LaunchScreen.storyboard */,
+				79BCD5921F808CAB0005B102 /* Info.plist */,
+				79BCD5931F808CAB0005B102 /* ViewController.swift */,
+			);
+			name = Continuous;
+			path = Sources/Continuous;
+			sourceTree = SOURCE_ROOT;
 		};
 		79E314D01F539E3A00241D88 = {
 			isa = PBXGroup;
@@ -159,8 +181,6 @@
 				79E314FA1F539E8D00241D88 /* Sources */,
 				79E314F51F539E8C00241D88 /* Tests */,
 				79BCD5171F80890A0005B102 /* Scripts */,
-				79BCD56A1F808C8E0005B102 /* Continuous */,
-				79BCD57F1F808C8E0005B102 /* ContinuousTests */,
 				79E314DB1F539E3A00241D88 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -179,6 +199,7 @@
 		79E314F51F539E8C00241D88 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				79BCD57F1F808C8E0005B102 /* ContinuousTests */,
 				79E314F61F539E8C00241D88 /* ContinuousKitTests */,
 				79E314F91F539E8C00241D88 /* LinuxMain.swift */,
 			);
@@ -197,6 +218,7 @@
 		79E314FA1F539E8D00241D88 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				79BCD5891F808CAB0005B102 /* Continuous */,
 				79E314FB1F539E8D00241D88 /* ContinuousKit */,
 			);
 			path = Sources;
@@ -265,10 +287,12 @@
 				79BCD5651F808C8E0005B102 /* Sources */,
 				79BCD5661F808C8E0005B102 /* Frameworks */,
 				79BCD5671F808C8E0005B102 /* Resources */,
+				79BCD59C1F808D1C0005B102 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				79BCD59B1F808D1B0005B102 /* PBXTargetDependency */,
 			);
 			name = Continuous;
 			productName = Continuous;
@@ -386,9 +410,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79BCD5761F808C8E0005B102 /* LaunchScreen.storyboard in Resources */,
-				79BCD5731F808C8E0005B102 /* Assets.xcassets in Resources */,
-				79BCD5711F808C8E0005B102 /* Main.storyboard in Resources */,
+				79BCD5961F808CDA0005B102 /* Assets.xcassets in Resources */,
+				79BCD5971F808CDC0005B102 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,8 +462,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79BCD56E1F808C8E0005B102 /* ViewController.swift in Sources */,
-				79BCD56C1F808C8E0005B102 /* AppDelegate.swift in Sources */,
+				79BCD5951F808CC40005B102 /* ViewController.swift in Sources */,
+				79BCD5941F808CC40005B102 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +509,11 @@
 			target = 79BCD5681F808C8E0005B102 /* Continuous */;
 			targetProxy = 79BCD57D1F808C8E0005B102 /* PBXContainerItemProxy */;
 		};
+		79BCD59B1F808D1B0005B102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79E314D91F539E3A00241D88 /* ContinuousKit */;
+			targetProxy = 79BCD59A1F808D1B0005B102 /* PBXContainerItemProxy */;
+		};
 		79E314E61F539E3A00241D88 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 79E314D91F539E3A00241D88 /* ContinuousKit */;
@@ -494,18 +522,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		79BCD56F1F808C8E0005B102 /* Main.storyboard */ = {
+		79BCD58C1F808CAB0005B102 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				79BCD5701F808C8E0005B102 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		79BCD5741F808C8E0005B102 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79BCD5751F808C8E0005B102 /* Base */,
+				79BCD58D1F808CAB0005B102 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -516,28 +536,30 @@
 		79BCD5841F808C8E0005B102 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Continuous/Info.plist;
+				INFOPLIST_FILE = Sources/Continuous/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.Continuous;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		79BCD5851F808C8E0005B102 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Continuous/Info.plist;
+				INFOPLIST_FILE = Sources/Continuous/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.Continuous;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -547,7 +569,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ContinuousTests/Info.plist;
+				INFOPLIST_FILE = Tests/ContinuousTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.ContinuousTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -563,7 +585,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ContinuousTests/Info.plist;
+				INFOPLIST_FILE = Tests/ContinuousTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.klundberg.ContinuousTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
