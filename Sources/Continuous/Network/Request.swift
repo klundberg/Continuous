@@ -30,14 +30,6 @@ struct Request<Response> {
     }
 }
 
-extension URLRequest {
-    mutating func addHTTPHeaders(_ headers: HTTPHeaders) {
-        for (header, value) in headers {
-            addValue(value, forHTTPHeaderField: header)
-        }
-    }
-}
-
 extension Request where Response: Decodable {
     init(path: String, method: HTTPMethod = .GET, headers: [String: String] = [:]) {
         self.init(path: path, method: method, headers: headers) { (data) -> Result<Response> in

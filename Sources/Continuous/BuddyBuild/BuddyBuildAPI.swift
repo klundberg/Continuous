@@ -1,8 +1,6 @@
 import Foundation
 
 class BuddyBuildAPI {
-    private static let token = "<secret>"
-
     private static func headers() -> [String: String] {
         return ["Authorization": "Bearer \(token)"]
     }
@@ -14,5 +12,4 @@ class BuddyBuildAPI {
     static func branches(appId: String) -> Request<[Branch]> {
         return .init(path: "/apps/\(appId)/branches", headers: headers())
     }
-
 }
