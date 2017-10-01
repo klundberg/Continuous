@@ -1,4 +1,4 @@
-{% for type in types.based.Codable|!enum %}
+{% for type in types.based.SnakeCaseCodable %}
 public extension {{ type.name }} {
     enum CodingKeys: String, CodingKey {
     {% for variable in type.variables|instance %}

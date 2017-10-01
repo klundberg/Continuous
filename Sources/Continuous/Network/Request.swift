@@ -4,16 +4,18 @@ enum HTTPMethod: String {
     case GET, POST, PUT, DELETE
 }
 
+typealias HTTPHeaders = [String: String]
+
 struct Request<Response> {
     typealias Parser = (Data) -> Result<Response>
 
     private let baseURL = "https://api.buddybuild.com/v1"
     let url: URL
     let method: HTTPMethod
-    let headers: [String: String]
+    let headers: HTTPHeaders
     let parse: Parser
 
-    init(path: String, method: HTTPMethod = .GET, headers: [String: String] = [:], parse: @escaping Parser) {
+    init(path: String, method: HTTPMethod = .GET, headers: HTTPHeaders = [:], parse: @escaping Parser) {
         self.url = URL(string: "\(baseURL)\(path)")!
         self.method = method
         self.headers = headers
@@ -23,10 +25,16 @@ struct Request<Response> {
     func toURLRequest() -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
-        for (header, value) in headers {
-            request.addValue(value, forHTTPHeaderField: header)
-        }
+        request.addHTTPHeaders(headers)
         return request
+    }
+}
+
+extension URLRequest {
+    mutating func addHTTPHeaders(_ headers: HTTPHeaders) {
+        for (header, value) in headers {
+            addValue(value, forHTTPHeaderField: header)
+        }
     }
 }
 

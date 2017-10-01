@@ -11,6 +11,8 @@
 		79673DAD1F623A26006C63EC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DAC1F623A26006C63EC /* Result.swift */; };
 		79673DAF1F623B01006C63EC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DAE1F623B01006C63EC /* Request.swift */; };
 		79673DB21F623D9E006C63EC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DB11F623D9E006C63EC /* NetworkService.swift */; };
+		79673DB41F624307006C63EC /* DeploymentGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DB31F624307006C63EC /* DeploymentGroup.swift */; };
+		79BCD5101F7860E30005B102 /* SnakeCaseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD50F1F7860E30005B102 /* SnakeCaseCodable.swift */; };
 		79E314E41F539E3A00241D88 /* Continuous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E314DA1F539E3A00241D88 /* Continuous.framework */; };
 		79E315091F539E8D00241D88 /* BuddyBuildAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FD1F539E8D00241D88 /* BuddyBuildAPI.swift */; };
 		79E3150A1F539E8D00241D88 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FF1F539E8D00241D88 /* App.swift */; };
@@ -35,6 +37,8 @@
 		79673DAC1F623A26006C63EC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		79673DAE1F623B01006C63EC /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		79673DB11F623D9E006C63EC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		79673DB31F624307006C63EC /* DeploymentGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeploymentGroup.swift; sourceTree = "<group>"; };
+		79BCD50F1F7860E30005B102 /* SnakeCaseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeCaseCodable.swift; sourceTree = "<group>"; };
 		79E314DA1F539E3A00241D88 /* Continuous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Continuous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E314E31F539E3A00241D88 /* ContinuousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContinuousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E314F41F539E8C00241D88 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 				79E3151E1F622FC800241D88 /* SnakeCaseCodingKeys.stencil */,
 				79E314FF1F539E8D00241D88 /* App.swift */,
 				79E315001F539E8D00241D88 /* Build.swift */,
+				79673DB31F624307006C63EC /* DeploymentGroup.swift */,
+				79BCD50F1F7860E30005B102 /* SnakeCaseCodable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,12 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79BCD5101F7860E30005B102 /* SnakeCaseCodable.swift in Sources */,
 				79E315091F539E8D00241D88 /* BuddyBuildAPI.swift in Sources */,
 				79673DAF1F623B01006C63EC /* Request.swift in Sources */,
 				79673DAD1F623A26006C63EC /* Result.swift in Sources */,
 				79673DAB1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift in Sources */,
 				79E3150B1F539E8D00241D88 /* Build.swift in Sources */,
 				79E3150A1F539E8D00241D88 /* App.swift in Sources */,
+				79673DB41F624307006C63EC /* DeploymentGroup.swift in Sources */,
 				79673DB21F623D9E006C63EC /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

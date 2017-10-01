@@ -3,13 +3,13 @@ public enum Platform: String, Codable {
     case android
 }
 
-public struct App: Codable {
+public struct App: SnakeCaseCodable {
     // sourcery: keyOverride = "_id"
     public let id: String
     public let appName: String
     public let platform: Platform
 }
 
-public struct Branch: Codable {
+public struct Branch: SnakeCaseCodable {
     public let name: String
 }
