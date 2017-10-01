@@ -1,6 +1,6 @@
 import XCTest
-@testable import ContinuousTests
+@testable import ContinuousKitTests
 
 XCTMain([
-    testCase(ContinuousTests.allTests),
+    testCase(ContinuousKitTests.allTests),
 ])

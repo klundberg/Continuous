@@ -1,7 +1,7 @@
 import XCTest
-@testable import Continuous
+@testable import ContinuousKit
 
-class ContinuousTests: XCTestCase {
+class ContinuousKitTests: XCTestCase {
 
     func testGetData() {
         let exp = expectation(description: "blah")
