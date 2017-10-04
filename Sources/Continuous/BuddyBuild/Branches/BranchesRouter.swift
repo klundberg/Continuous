@@ -17,6 +17,8 @@ class BranchesRouter {
         presenter.interactor = interactor
         presenter.router = self
 
+        interactor.presenter = presenter
+
         let vc = BranchesViewController()
         vc.presenter = presenter
 
