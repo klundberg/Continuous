@@ -21,19 +21,22 @@ class BranchesInteractorTests: XCTestCase {
             return Result.value(value as! Response)
         }
 
-        var requestsMade: [URL] = []
+        var requestsMade: [(URL, Any)] = []
 
         func request<Response>(_ request: Request<Response>, completion: @escaping (Result<Response>) -> ()) {
-            requestsMade.append(request.url)
+            let completion2 = { (result: Result<Response>) in
+                self.requestsMade.append((request.url, result))
+                completion(result)
+            }
 
             switch Response.self {
             case [App].self:
-                completion(result([
+                completion2(result([
                     App(id: "1", name: "one", platform: .ios),
                     App(id: "2", name: "two", platform: .ios),
                     ]))
             case [Branch].self:
-                completion(result([
+                completion2(result([
                     Branch(name: "branch1"),
                     ]))
             default:
@@ -56,15 +59,14 @@ class BranchesInteractorTests: XCTestCase {
     func testLoadsAppsFirst() {
         interactor.requestData()
 
-        XCTAssertEqual(networkService.requestsMade.first,
+        XCTAssertEqual(networkService.requestsMade[0].0,
                        URL(string: "https://api.buddybuild.com/v1/apps")!)
     }
 
     func testBranchesLoadFromFirstAppByDefault() {
         interactor.requestData()
 
-        XCTAssertEqual(networkService.requestsMade[1],
+        XCTAssertEqual(networkService.requestsMade[1].0,
                        URL(string: "https://api.buddybuild.com/v1/apps/1/branches")!)
     }
-    
 }

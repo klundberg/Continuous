@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		795D74FB1F8A9B2100AAF26B /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D74FA1F8A9B2100AAF26B /* AppRouter.swift */; };
+		795D74FE1F8A9D3200AAF26B /* AddAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D74FD1F8A9D3200AAF26B /* AddAccountRouter.swift */; };
+		795D75001F8A9DB500AAF26B /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D74FF1F8A9DB500AAF26B /* AddAccountViewController.swift */; };
+		795D75021F8A9DE100AAF26B /* AddAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D75011F8A9DE100AAF26B /* AddAccountPresenter.swift */; };
+		795D75041F8A9E1700AAF26B /* AddAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D75031F8A9E1700AAF26B /* AddAccountInteractor.swift */; };
 		79673DAB1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DAA1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift */; };
 		79673DAD1F623A26006C63EC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DAC1F623A26006C63EC /* Result.swift */; };
 		79673DAF1F623B01006C63EC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DAE1F623B01006C63EC /* Request.swift */; };
@@ -76,6 +81,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		795D74FA1F8A9B2100AAF26B /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		795D74FD1F8A9D3200AAF26B /* AddAccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountRouter.swift; sourceTree = "<group>"; };
+		795D74FF1F8A9DB500AAF26B /* AddAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
+		795D75011F8A9DE100AAF26B /* AddAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountPresenter.swift; sourceTree = "<group>"; };
+		795D75031F8A9E1700AAF26B /* AddAccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountInteractor.swift; sourceTree = "<group>"; };
 		79673DAA1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnakeCaseCodingKeys.generated.swift; sourceTree = "<group>"; };
 		79673DAC1F623A26006C63EC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		79673DAE1F623B01006C63EC /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -152,6 +162,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		795D74FC1F8A9D2400AAF26B /* AddAccount */ = {
+			isa = PBXGroup;
+			children = (
+				795D74FD1F8A9D3200AAF26B /* AddAccountRouter.swift */,
+				795D74FF1F8A9DB500AAF26B /* AddAccountViewController.swift */,
+				795D75011F8A9DE100AAF26B /* AddAccountPresenter.swift */,
+				795D75031F8A9E1700AAF26B /* AddAccountInteractor.swift */,
+			);
+			name = AddAccount;
+			path = Sources/Continuous/BuddyBuild/AddAccount;
+			sourceTree = SOURCE_ROOT;
+		};
 		79673DB01F623CFE006C63EC /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +210,9 @@
 		79BCD5A21F8098740005B102 /* BuddyBuild */ = {
 			isa = PBXGroup;
 			children = (
+				795D74FC1F8A9D2400AAF26B /* AddAccount */,
 				79BCD5B21F8099390005B102 /* Branches */,
+				795D74FA1F8A9B2100AAF26B /* AppRouter.swift */,
 			);
 			name = BuddyBuild;
 			path = Sources/Continuous/BuddyBuild;
@@ -544,8 +568,13 @@
 			files = (
 				79BCD5AE1F80992C0005B102 /* BranchesPresenter.swift in Sources */,
 				79BCD5AD1F80992C0005B102 /* BranchesViewController.swift in Sources */,
+				795D74FB1F8A9B2100AAF26B /* AppRouter.swift in Sources */,
 				79BCD5AF1F80992C0005B102 /* BranchesInteractor.swift in Sources */,
+				795D74FE1F8A9D3200AAF26B /* AddAccountRouter.swift in Sources */,
+				795D75021F8A9DE100AAF26B /* AddAccountPresenter.swift in Sources */,
+				795D75041F8A9E1700AAF26B /* AddAccountInteractor.swift in Sources */,
 				79BCD5B01F80992C0005B102 /* BranchesRouter.swift in Sources */,
+				795D75001F8A9DB500AAF26B /* AddAccountViewController.swift in Sources */,
 				79BCD5941F808CC40005B102 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

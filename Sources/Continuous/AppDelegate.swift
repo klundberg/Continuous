@@ -14,14 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let networkService: NetworkService = StandardNetworkService()
+    let appRouter = AppRouter()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.backgroundColor = .white
-        window?.rootViewController = BranchesRouter().build(networkService: networkService)
-        window?.makeKeyAndVisible()
-
+        window = appRouter.start(in: UIScreen.main, networkService: networkService)
+        
         return true
     }
 }
