@@ -12,6 +12,8 @@
 		795D75001F8A9DB500AAF26B /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D74FF1F8A9DB500AAF26B /* AddAccountViewController.swift */; };
 		795D75021F8A9DE100AAF26B /* AddAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D75011F8A9DE100AAF26B /* AddAccountPresenter.swift */; };
 		795D75041F8A9E1700AAF26B /* AddAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D75031F8A9E1700AAF26B /* AddAccountInteractor.swift */; };
+		795D75111F8AA42700AAF26B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D75101F8AA42700AAF26B /* Account.swift */; };
+		795D75131F8AA5DB00AAF26B /* BuildService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D75121F8AA5DB00AAF26B /* BuildService.swift */; };
 		79673DAB1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DAA1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift */; };
 		79673DAD1F623A26006C63EC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DAC1F623A26006C63EC /* Result.swift */; };
 		79673DAF1F623B01006C63EC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79673DAE1F623B01006C63EC /* Request.swift */; };
@@ -37,7 +39,6 @@
 		79E315091F539E8D00241D88 /* BuddyBuildAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FD1F539E8D00241D88 /* BuddyBuildAPI.swift */; };
 		79E3150A1F539E8D00241D88 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314FF1F539E8D00241D88 /* App.swift */; };
 		79E3150B1F539E8D00241D88 /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E315001F539E8D00241D88 /* Build.swift */; };
-		79E3150C1F539E8D00241D88 /* ContinuousKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79E315011F539E8D00241D88 /* ContinuousKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79E3150F1F539E8D00241D88 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 79E315041F539E8D00241D88 /* README.md */; };
 		79E315101F539E9D00241D88 /* ContinuousKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E314F71F539E8C00241D88 /* ContinuousKitTests.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,8 @@
 		795D74FF1F8A9DB500AAF26B /* AddAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
 		795D75011F8A9DE100AAF26B /* AddAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountPresenter.swift; sourceTree = "<group>"; };
 		795D75031F8A9E1700AAF26B /* AddAccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountInteractor.swift; sourceTree = "<group>"; };
+		795D75101F8AA42700AAF26B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		795D75121F8AA5DB00AAF26B /* BuildService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildService.swift; sourceTree = "<group>"; };
 		79673DAA1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnakeCaseCodingKeys.generated.swift; sourceTree = "<group>"; };
 		79673DAC1F623A26006C63EC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		79673DAE1F623B01006C63EC /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -120,7 +123,6 @@
 		79E314FD1F539E8D00241D88 /* BuddyBuildAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddyBuildAPI.swift; sourceTree = "<group>"; };
 		79E314FF1F539E8D00241D88 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		79E315001F539E8D00241D88 /* Build.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
-		79E315011F539E8D00241D88 /* ContinuousKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContinuousKit.h; sourceTree = "<group>"; };
 		79E315031F539E8D00241D88 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79E315041F539E8D00241D88 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79E3151E1F622FC800241D88 /* SnakeCaseCodingKeys.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = SnakeCaseCodingKeys.stencil; sourceTree = "<group>"; };
@@ -173,6 +175,14 @@
 			name = AddAccount;
 			path = Sources/Continuous/BuddyBuild/AddAccount;
 			sourceTree = SOURCE_ROOT;
+		};
+		795D750F1F8AA3EC00AAF26B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				795D75101F8AA42700AAF26B /* Account.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
 		};
 		79673DB01F623CFE006C63EC /* Network */ = {
 			isa = PBXGroup;
@@ -315,7 +325,7 @@
 				79673DB01F623CFE006C63EC /* Network */,
 				79E314FC1F539E8D00241D88 /* BuddyBuild */,
 				79E315031F539E8D00241D88 /* Info.plist */,
-				79E315011F539E8D00241D88 /* ContinuousKit.h */,
+				795D75121F8AA5DB00AAF26B /* BuildService.swift */,
 			);
 			path = ContinuousKit;
 			sourceTree = "<group>";
@@ -323,6 +333,7 @@
 		79E314FC1F539E8D00241D88 /* BuddyBuild */ = {
 			isa = PBXGroup;
 			children = (
+				795D750F1F8AA3EC00AAF26B /* Account */,
 				79E314FD1F539E8D00241D88 /* BuddyBuildAPI.swift */,
 				79E314FE1F539E8D00241D88 /* Models */,
 			);
@@ -358,7 +369,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79E3150C1F539E8D00241D88 /* ContinuousKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,11 +606,13 @@
 				79E315091F539E8D00241D88 /* BuddyBuildAPI.swift in Sources */,
 				79673DAF1F623B01006C63EC /* Request.swift in Sources */,
 				79673DAD1F623A26006C63EC /* Result.swift in Sources */,
+				795D75111F8AA42700AAF26B /* Account.swift in Sources */,
 				79673DAB1F623871006C63EC /* SnakeCaseCodingKeys.generated.swift in Sources */,
 				79E3150B1F539E8D00241D88 /* Build.swift in Sources */,
 				79E3150A1F539E8D00241D88 /* App.swift in Sources */,
 				79673DB41F624307006C63EC /* DeploymentGroup.swift in Sources */,
 				79BCD5151F8083790005B102 /* URLRequest+Extension.swift in Sources */,
+				795D75131F8AA5DB00AAF26B /* BuildService.swift in Sources */,
 				79673DB21F623D9E006C63EC /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

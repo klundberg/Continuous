@@ -1,15 +1,39 @@
 import Foundation
 
 public enum BuildStatus: String, Codable {
-    case pending
     case cancelled
-    case building
-    case succeeded
     case failed
+    case queued
+    case running
+    case success
 }
 
 public struct BuildName: SnakeCaseCodable {
     public let name: String
+}
+
+public struct BuildFilter {
+    public var branch: String?
+    public var scheme: String?
+    public var status: BuildStatus?
+    public var limit: Int?
+
+    public var asDictionary: [String: String] {
+        var dict: [String: String] = [:]
+        if let branch = branch {
+            dict["branch"] = branch
+        }
+        if let scheme = scheme {
+            dict["scheme"] = scheme
+        }
+        if let status = status {
+            dict["status"] = status.rawValue
+        }
+        if let limit = limit {
+            dict["limit"] = String(limit)
+        }
+        return dict
+    }
 }
 
 public struct Build: SnakeCaseCodable {
