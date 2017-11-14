@@ -12,7 +12,7 @@ import Security
 public struct APIKey: Codable {
     var key: String
 
-    public init(key: String) {
+    public init(_ key: String) {
         self.key = key
     }
 }

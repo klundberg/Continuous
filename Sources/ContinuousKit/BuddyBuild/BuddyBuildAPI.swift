@@ -1,41 +1,11 @@
 import Foundation
 
-public enum BuddyBuildAPI {
-    private static func headers() -> [String: String] {
-        return ["Authorization": "Bearer \(token)"]
-    }
-
-    private static func url(_ path: String, queryParams: [String: String]? = nil) -> URL {
-        let baseURL = "https://api.buddybuild.com/v1"
-        var components = URLComponents(string: "\(baseURL)\(path)")
-        components?.queryItems = queryParams?.flatMap({ key, value in
-            return URLQueryItem(name: key, value: value)
-        })
-        return (components?.url)!
-    }
-
-    public static func apps() -> Request<[App]> {
-        return .init(url: url("/apps"), headers: headers())
-    }
-
-    public static func branches(appId: String) -> Request<[Branch]> {
-        return .init(url: url("/apps/\(appId)/branches"), headers: headers())
-    }
-
-    public static func builds(appId: String, filter: BuildFilter? = nil) -> Request<[Build]> {
-        return .init(url: url("/apps/\(appId)/builds", queryParams: filter?.asDictionary), headers: headers())
-    }
-
-    public static func build(buildId: String) -> Request<Build> {
-        return .init(url: url("/builds/\(buildId)"), headers: headers())
-    }
-
-    public static func latestBuild(appId: String) -> Request<Build> {
-        return .init(url: url("/apps/\(appId)/build/latest"), headers: headers())
-    }
+public protocol QueryParameterConvertible {
+    func queryParameters() -> [String: String]
 }
 
 public class BuddyBuild {
+    private let baseURL = "https://api.buddybuild.com/v1"
     private let key: APIKey
     private let networkService: NetworkService
 
@@ -44,23 +14,56 @@ public class BuddyBuild {
         self.networkService = networkService
     }
 
-    func getApps(completion: @escaping (Result<[App]>) -> Void) {
-        networkService.request(BuddyBuildAPI.apps(), completion: completion)
+    public enum Requests {
+//
+//        public static func coverage(buildId: String) -> Request<CoverageResults> {
+//            return .init(url: url("/builds/\(buildId)/coverage"), headers: headers())
+//        }
     }
 
-    func getBranches(for app: App, completion: @escaping (Result<[Branch]>) -> Void) {
-        networkService.request(BuddyBuildAPI.branches(appId: app.id), completion: completion)
+    private func headers() -> [String: String] {
+        return ["Authorization": "Bearer \(key)"]
     }
 
-    func getBuilds(for app: App, filter: BuildFilter? = nil, completion: @escaping (Result<[Build]>) -> Void) {
-        networkService.request(BuddyBuildAPI.builds(appId: app.id, filter: filter), completion: completion)
+    private func makeURL(_ path: String, queryParams: QueryParameterConvertible? = nil) -> URL {
+        var components = URLComponents(string: "\(baseURL)\(path)")!
+        components.queryItems = queryParams?.queryParameters().flatMap({ key, value in
+            return URLQueryItem(name: key, value: value)
+        })
+        return components.url!
     }
 
-    func getBuild(for id: String, completion: @escaping (Result<Build>) -> Void) {
-        networkService.request(BuddyBuildAPI.build(buildId: id), completion: completion)
+    public typealias Completion<Response> = (Result<Response>) -> Void
+
+    private func makeRequest<Response: Decodable>(path: String, queryParams: QueryParameterConvertible? = nil) -> Request<Response> {
+        return Request(url: makeURL(path, queryParams: queryParams), headers: headers())
     }
 
-    func getLatestBuild(for app: App, completion: @escaping (Result<Build>) -> Void) {
-        networkService.request(BuddyBuildAPI.latestBuild(appId: app.id), completion: completion)
+    public func getApps(completion: @escaping Completion<[App]>) {
+        networkService.request(makeRequest(path: "/apps"), completion: completion)
+    }
+
+    public func getBranches(for app: App, completion: @escaping Completion<[Branch]>) {
+        networkService.request(makeRequest(path: "/apps/\(app.id)/branches"), completion: completion)
+    }
+
+    public func getBuilds(for app: App, filter: BuildFilter? = nil, completion: @escaping Completion<[Build]>) {
+        networkService.request(makeRequest(path: "/apps/\(app.id)/builds", queryParams: filter), completion: completion)
+    }
+
+    public func getBuild(for id: String, completion: @escaping Completion<Build>) {
+        networkService.request(makeRequest(path: "/builds/\(id)"), completion: completion)
+    }
+
+    public func getLatestBuild(for app: App, filter: BuildFilter? = nil, completion: @escaping Completion<Build>) {
+        networkService.request(makeRequest(path: "/apps/\(app.id)/build/latest", queryParams: filter), completion: completion)
+    }
+
+    public func getTestResults(for build: Build, filter: TestFilter? = nil, completion: @escaping Completion<TestResults>) {
+        networkService.request(makeRequest(path: "/builds/\(build.id)/tests", queryParams: filter), completion: completion)
+    }
+
+    public func getCoverage(for build: Build, options: CoverageOptions, completion: @escaping Completion<CoverageResults>) {
+        networkService.request(makeRequest(path: "/builds/\(build.id)/coverage", queryParams: options), completion: completion)
     }
 }

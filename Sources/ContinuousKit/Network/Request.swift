@@ -31,8 +31,11 @@ public struct Request<Response> {
 
 extension Request where Response: Decodable {
     public init(url: URL, method: HTTPMethod = .GET, headers: [String: String] = [:]) {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        
         self.init(url: url, method: method, headers: headers) { (data) -> Result<Response> in
-            return Result(evaluate: { try JSONDecoder().decode(Response.self, from: data) })
+            return Result(evaluate: { try decoder.decode(Response.self, from: data) })
         }
     }
 }

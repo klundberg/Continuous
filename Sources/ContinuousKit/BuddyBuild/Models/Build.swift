@@ -8,17 +8,13 @@ public enum BuildStatus: String, Codable {
     case success
 }
 
-public struct BuildName: SnakeCaseCodable {
-    public let name: String
-}
-
-public struct BuildFilter {
+public struct BuildFilter: QueryParameterConvertible {
     public var branch: String?
     public var scheme: String?
     public var status: BuildStatus?
     public var limit: Int?
 
-    public var asDictionary: [String: String] {
+    public func queryParameters() -> [String : String] {
         var dict: [String: String] = [:]
         if let branch = branch {
             dict["branch"] = branch
@@ -45,11 +41,11 @@ public struct Build: SnakeCaseCodable {
     public let finished: Bool
     public let commitInfo: CommitInfo
     public let buildNumber: Int
-    public let createdAt: Date
-    public let startedAt: Date
-    public let finishedAt: Date
+    public let createdAt: Date?
+    public let startedAt: Date?
+    public let finishedAt: Date?
     public let testSummary: TestSummary
-    public let links: [String: Link]
+    public let links: [String: [Link]]
 }
 
 public struct CommitInfo: SnakeCaseCodable {
@@ -62,9 +58,9 @@ public struct CommitInfo: SnakeCaseCodable {
 }
 
 public struct TestSummary: SnakeCaseCodable {
-    public let testsCount: Int
-    public let testsPassed: Int
-    public let codeCoveragePercentage: Double
+    public let testsCount: Int?
+    public let testsPassed: Int?
+    public let codeCoveragePercentage: Double?
 }
 
 public struct Link: SnakeCaseCodable {
